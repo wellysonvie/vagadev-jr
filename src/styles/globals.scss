@@ -1,0 +1,46 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; //15px
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; //14px
+  }
+}
+
+body {
+  background-color: $color-white;
+  font-family: $font-family;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.ds-none {
+  display: none !important;
+}
