@@ -1,0 +1,47 @@
+.header {
+  width: min(90vw, 1300px);
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 2rem;
+    }
+  }
+
+  .menuOptions {
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-right: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      img {
+        font-size: 1rem;
+        margin-right: 0.8rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--white);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        padding-left: 1rem;
+        border-left: 1px solid var(--white);
+      }
+    }
+  }
+}
