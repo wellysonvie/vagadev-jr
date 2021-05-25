@@ -39,15 +39,11 @@
         color: var(--white);
       }
 
-      &:nth-child(1),
       &:nth-child(2) {
-        margin-right: 2.68rem;
-      }
-
-      &:nth-child(2),
-      &:nth-child(3) {
-        padding-left: 2.43rem;
+        margin: 0 2.43rem 0 2.68rem;
+        padding: 0 2.68rem 0 2.43rem;
         border-left: 1px solid var(--white);
+        border-right: 1px solid var(--white);
       }
 
       &:nth-child(3) {
