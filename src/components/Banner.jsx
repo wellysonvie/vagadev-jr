@@ -37,7 +37,7 @@ const Banner = ({ slides }) => {
         <h2>{slides[currentSlideIndex].name}</h2>
         <div className={styles.price}>
           <h3>{slides[currentSlideIndex].price.split(',')[0]}</h3>
-          <span>{slides[currentSlideIndex].price.split(',')[1]}</span>
+          <span>,{slides[currentSlideIndex].price.split(',')[1]}</span>
         </div>
         <p>{slides[currentSlideIndex].description}</p>
       </div>
