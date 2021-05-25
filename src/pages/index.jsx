@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.scss'
@@ -5,6 +6,10 @@ import styles from '../styles/Home.module.scss'
 export default function Home({ bannerSlides }) {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Home | N1 Rush</title>
+      </Head>
+
       <Header />
 
       <main className={styles.main}>
