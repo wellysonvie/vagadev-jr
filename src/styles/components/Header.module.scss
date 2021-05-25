@@ -1,7 +1,7 @@
 .header {
-  width: min(90vw, 1300px);
+  width: min(90vw, 1190px);
   margin: 0 auto;
-  margin-top: 2rem;
+  padding-top: 2.75rem;
 
   display: flex;
   align-items: center;
@@ -12,7 +12,8 @@
     align-items: center;
 
     img {
-      margin-right: 2rem;
+      margin-right: 2.68rem;
+      cursor: pointer;
     }
   }
 
@@ -21,26 +22,45 @@
     align-items: center;
 
     li {
-      margin-right: 1rem;
+      cursor: pointer;
 
       display: flex;
       align-items: center;
 
       img {
-        font-size: 1rem;
-        margin-right: 0.8rem;
+        margin-right: 0.94rem;
       }
 
       span {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         font-weight: 500;
         color: var(--white);
       }
 
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-right: 2.68rem;
+      }
+
       &:nth-child(2),
       &:nth-child(3) {
-        padding-left: 1rem;
+        padding-left: 2.43rem;
         border-left: 1px solid var(--white);
+      }
+
+      &:nth-child(3) {
+        span {
+          background-color: var(--blue);
+          width: 1.43rem;
+          height: 1.43rem;
+          border-radius: 50%;
+
+          font-weight: 900;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }
