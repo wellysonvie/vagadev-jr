@@ -1,0 +1,132 @@
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 52.5rem;
+
+  &Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &Info {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 13rem;
+    text-align: right;
+
+    h2 {
+      width: 26.25rem;
+      margin-left: auto;
+      margin-bottom: 0.8rem;
+      font-weight: 900;
+      font-size: 2.875rem;
+      color: var(--white);
+    }
+
+    .price {
+      margin-bottom: 1.75rem;
+
+      display: flex;
+      justify-content: flex-end;
+
+      h3,
+      span {
+        color: var(--blue);
+        font-weight: 900;
+      }
+
+      h3 {
+        font-size: 4.375rem;
+        line-height: 0.9;
+      }
+
+      span {
+        font-size: 1.75rem;
+      }
+    }
+
+    p {
+      width: 26.25rem;
+      margin-left: auto;
+      color: var(--white);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+  }
+
+  &Slider {
+    position: absolute;
+    right: -10rem;
+    top: calc(50% - 1.97rem);
+    height: 3.94rem;
+    width: 24rem;
+
+    transform: rotate(90deg);
+
+    display: flex;
+
+    .currentProduct {
+      flex-basis: 78%;
+      padding: 0 1.5rem;
+      background-color: var(--blue);
+
+      display: flex;
+      align-items: center;
+
+      h4 {
+        margin-right: 3.5rem;
+        color: var(--white);
+        font-weight: 400;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      span {
+        flex: 1;
+        height: 1px;
+        background-color: var(--white);
+      }
+    }
+
+    .controller {
+      flex-basis: 22%;
+      padding: 0 1rem;
+      background-color: var(--dark-blue);
+      border-radius: 0 0 10px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: var(--white);
+        transform: rotate(-90deg);
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: rotate(-90deg);
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
