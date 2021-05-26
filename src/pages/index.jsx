@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Banner from '../components/Banner'
+import FeaturedProducts from '../components/FeaturedProducts';
 import Header from '../components/Header'
 import MiddleBanner from '../components/MiddleBanner';
 import styles from '../styles/Home.module.scss'
 
-export default function Home({ bannerSlides, middleBannerItems }) {
+export default function Home({ bannerSlides, middleBannerItems, featuredProducts }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +17,7 @@ export default function Home({ bannerSlides, middleBannerItems }) {
       <main className={styles.main}>
         <Banner slides={bannerSlides} />
         <MiddleBanner items={middleBannerItems} />
+        <FeaturedProducts products={featuredProducts} />
       </main>
 
       <footer className={styles.footer}>
@@ -64,6 +66,23 @@ export function getServerSideProps() {
           image: '/assets/img/sekiro_banner.jpg',
           name: 'SEKIRO - Shadows die twice'
         }
+      ],
+      featuredProducts: [
+        {
+          image: '/assets/img/product-outriders.jpg',
+          name: 'Outriders',
+          price: 'R$ 200,00',
+        },
+        {
+          image: '/assets/img/product-cyberpunk2077.jpg',
+          name: 'CYBERPUNK 2077',
+          price: 'R$ 200,00',
+        },
+        {
+          image: '/assets/img/product-donkey-kong-country-tropical-freeze.jpg',
+          name: 'Donkey Kong Country Tropical Freeze',
+          price: 'R$ 200,00',
+        },
       ]
     }
   }

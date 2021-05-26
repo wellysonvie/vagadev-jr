@@ -1,0 +1,31 @@
+.featuredProducts {
+  width: min(90vw, 1280px);
+  margin: 0 auto;
+  margin-top: 5.18rem;
+
+  header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 1.38rem;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 2.25rem;
+      color: var(--dark-blue);
+    }
+  }
+
+  .productList {
+    margin-top: 5rem;
+    margin-bottom: 9.68rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
