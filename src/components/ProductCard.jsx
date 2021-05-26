@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../styles/components/ProductCard.module.scss';
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ image, name, price, openAddedProductModal }) => {
 
   const [purchased, setPurchased] = useState(false);
+
+  function purchase() {
+    setPurchased(!purchased);
+  }
+
+  useEffect(() => {
+    if (purchased) openAddedProductModal();
+  }, [purchased]);
 
   return (
     <article className={styles.productCard}>
@@ -13,7 +21,7 @@ const ProductCard = ({ image, name, price }) => {
         <p>{price}</p>
         <button
           className={purchased ? styles.purchased : ''}
-          onClick={() => setPurchased(!purchased)}
+          onClick={purchase}
         >
           <img src="/assets/svg/mario.svg" />
         </button>

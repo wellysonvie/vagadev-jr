@@ -75,6 +75,10 @@
           right: 0.5rem;
           bottom: 0;
         }
+
+        &:hover::after {
+          content: "REMOVER";
+        }
       }
     }
   }
