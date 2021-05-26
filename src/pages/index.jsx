@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import MiddleBanner from '../components/MiddleBanner';
 import styles from '../styles/Home.module.scss'
 
-export default function Home({ bannerSlides }) {
+export default function Home({ bannerSlides, middleBannerItems }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +15,7 @@ export default function Home({ bannerSlides }) {
 
       <main className={styles.main}>
         <Banner slides={bannerSlides} />
+        <MiddleBanner items={middleBannerItems} />
       </main>
 
       <footer className={styles.footer}>
@@ -52,6 +54,16 @@ export function getServerSideProps() {
             dos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, 
             Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou.`
         },
+      ],
+      middleBannerItems: [
+        {
+          image: '/assets/img/zelda_banner.jpg',
+          name: 'The Legend of Zelda - Breath of th wild'
+        },
+        {
+          image: '/assets/img/sekiro_banner.jpg',
+          name: 'SEKIRO - Shadows die twice'
+        }
       ]
     }
   }
