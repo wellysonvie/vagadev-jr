@@ -18,7 +18,7 @@ const FeaturedProducts = ({ products }) => {
           {products.map(product => (
             <ProductCard
               key={product.name}
-              {...product}
+              product={product}
               openAddedProductModal={() => setShowAddedProductModal(true)}
             />
           ))}

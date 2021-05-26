@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import NavBar from './NavBar';
+import { useBag } from '../contexts/BagContext';
 import styles from '../styles/components/Header.module.scss';
-
 
 const Header = () => {
 
   const [showNavBar, setShowNavBar] = useState(false);
+  const { bagProducts } = useBag();
 
   return (
     <header className={styles.header}>
@@ -29,7 +30,7 @@ const Header = () => {
         </li>
         <li>
           <img src="/assets/svg/shopping-bag-solid.svg" alt="Carrinho" />
-          <span>2</span>
+          <span>{bagProducts.length}</span>
         </li>
       </ul>
     </header>

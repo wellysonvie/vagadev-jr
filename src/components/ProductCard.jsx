@@ -1,24 +1,31 @@
 import { useEffect, useState } from 'react';
+import { useBag } from '../contexts/BagContext';
 import styles from '../styles/components/ProductCard.module.scss';
 
-const ProductCard = ({ image, name, price, openAddedProductModal }) => {
+const ProductCard = ({ product, openAddedProductModal }) => {
 
   const [purchased, setPurchased] = useState(false);
+  const { addProduct, removeProduct } = useBag();
 
   function purchase() {
     setPurchased(!purchased);
   }
 
   useEffect(() => {
-    if (purchased) openAddedProductModal();
+    if (purchased) {
+      addProduct(product);
+      openAddedProductModal();
+    } else {
+      removeProduct(product.id);
+    }
   }, [purchased]);
 
   return (
     <article className={styles.productCard}>
-      <img src={image} alt={name} />
+      <img src={product.image} alt={product.name} />
       <div>
-        <h2>{name}</h2>
-        <p>{price}</p>
+        <h2>{product.name}</h2>
+        <p>{product.price}</p>
         <button
           className={purchased ? styles.purchased : ''}
           onClick={purchase}

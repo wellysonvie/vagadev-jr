@@ -69,16 +69,19 @@ export function getServerSideProps() {
       ],
       featuredProducts: [
         {
+          id: 0,
           image: '/assets/img/product-outriders.jpg',
           name: 'Outriders',
           price: 'R$ 200,00',
         },
         {
+          id: 1,
           image: '/assets/img/product-cyberpunk2077.jpg',
           name: 'CYBERPUNK 2077',
           price: 'R$ 200,00',
         },
         {
+          id: 2,
           image: '/assets/img/product-donkey-kong-country-tropical-freeze.jpg',
           name: 'Donkey Kong Country Tropical Freeze',
           price: 'R$ 200,00',
