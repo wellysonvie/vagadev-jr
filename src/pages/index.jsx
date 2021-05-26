@@ -21,7 +21,12 @@ export default function Home({ bannerSlides, middleBannerItems, featuredProducts
       </main>
 
       <footer className={styles.footer}>
-
+        <div>
+          <img src="/assets/svg/logo_n1.svg" alt="Agência N1" />
+        </div>
+        <div>
+          <p>Agência N1 - Todos os direitos reservados</p>
+        </div>
       </footer>
     </div>
   )
