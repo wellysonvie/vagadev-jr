@@ -38,3 +38,22 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .container .footer {
+    height: 4.25rem;
+
+    div:nth-child(1) {
+      flex-basis: 20%;
+      justify-content: center;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    div:nth-child(2) p {
+      font-size: 0.75rem;
+    }
+  }
+}
