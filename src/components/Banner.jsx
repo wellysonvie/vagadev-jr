@@ -30,8 +30,12 @@ const Banner = ({ slides }) => {
   return (
     <div className={styles.banner}>
       <div
-        className={styles.bannerBackground}
+        className={`${styles.bannerBackground} ${styles.desktop}`}
         style={{ backgroundImage: `url('${slides[currentSlideIndex].images.desktop}')` }}
+      />
+      <div
+        className={`${styles.bannerBackground} ${styles.mobile}`}
+        style={{ backgroundImage: `url('${slides[currentSlideIndex].images.mobile}')` }}
       />
       <div className={styles.bannerInfo}>
         <h2>{slides[currentSlideIndex].name}</h2>
