@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.brand}>
-        <img
-          src="/assets/svg/icon_hamburguer.svg"
-          alt="Menu"
+        <div
+          className={styles.hamburgerBtn}
           onClick={() => setShowNavBar(!showNavBar)}
+          data-clicked={showNavBar}
         />
         <img src="/assets/svg/logo_n1_rush.svg" alt="N1 Rush" />
       </div>
