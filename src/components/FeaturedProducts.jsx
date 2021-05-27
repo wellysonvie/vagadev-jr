@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ProductCard from './ProductCard';
 import styles from '../styles/components/FeaturedProducts.module.scss';
 import AddedProductModal from './AddedProductModal';
+import ProductListCarousel from './ProductListCarousel';
 
 const FeaturedProducts = ({ products }) => {
 
@@ -23,6 +24,10 @@ const FeaturedProducts = ({ products }) => {
             />
           ))}
         </div>
+        <ProductListCarousel
+          products={products}
+          openAddedProductModal={() => setShowAddedProductModal(true)}
+        />
       </section>
       {showAddedProductModal &&
         <AddedProductModal
