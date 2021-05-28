@@ -49,15 +49,26 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .middleBanner {
+    margin-top: 52rem;
     width: 100%;
-    margin-top: 24.6rem;
     flex-direction: column;
 
     article {
-      width: 92%;
+      width: 94%;
       margin: 0;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .middleBanner {
+    margin-top: 24.6rem;
+
+    article {
+      width: 92%;
       margin-bottom: 0.675rem;
 
       img {

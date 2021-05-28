@@ -136,6 +136,49 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .banner {
+    &Info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0.875rem 1.81rem;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    &Slider {
+      top: auto;
+      right: auto;
+      bottom: -3.25rem;
+      left: 0;
+      width: 100%;
+      height: 3.25rem;
+
+      transform: rotate(0deg);
+
+      .currentProduct {
+        flex-basis: 82%;
+        border-radius: 0px 0px 0px 10px;
+      }
+
+      .controller {
+        flex-basis: 18%;
+        border-radius: 0;
+
+        span,
+        div {
+          transform: rotate(0deg);
+        }
+
+        div {
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .banner {
     height: 23.44rem;
@@ -150,13 +193,6 @@
     }
 
     &Info {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      margin: 0;
-      padding: 0.875rem 1.81rem;
-      background: rgba(0, 0, 0, 0.65);
-
       h2 {
         width: 100%;
         margin-bottom: 0.7rem;
@@ -178,18 +214,8 @@
     }
 
     &Slider {
-      top: auto;
-      right: auto;
-      bottom: -3.25rem;
-      left: 0;
-      width: 100%;
-      height: 3.25rem;
-
-      transform: rotate(0deg);
-
       .currentProduct {
         flex-basis: 70%;
-        border-radius: 0px 0px 0px 10px;
 
         span {
           display: none;
@@ -198,16 +224,6 @@
 
       .controller {
         flex-basis: 30%;
-        border-radius: 0;
-
-        span,
-        div {
-          transform: rotate(0deg);
-        }
-
-        div {
-          flex-basis: 50%;
-        }
       }
     }
   }

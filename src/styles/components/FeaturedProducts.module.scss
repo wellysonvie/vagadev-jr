@@ -30,6 +30,12 @@
   }
 }
 
+@media screen and (max-width: 840px) {
+  .featuredProducts .productList {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .featuredProducts {
     margin-top: 2.15rem;
@@ -44,10 +50,6 @@
       h1 {
         font-size: 1.125rem;
       }
-    }
-
-    .productList {
-      display: none;
     }
   }
 }

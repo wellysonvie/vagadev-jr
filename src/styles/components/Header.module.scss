@@ -26,7 +26,7 @@
     }
 
     img {
-      margin-right: 1.5rem;
+      margin-right: 1rem;
       cursor: pointer;
     }
   }
@@ -80,6 +80,24 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header .menuOptions li {
+    margin: 0 0.4rem !important;
+    padding: 0 !important;
+    border: none !important;
+
+    span {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      img {
+        margin-right: -0.3rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .header {
     padding-top: 1.75rem;
@@ -96,22 +114,6 @@
       img {
         width: 6.68rem;
         height: auto;
-      }
-    }
-
-    .menuOptions li {
-      margin: 0 0.4rem !important;
-      padding: 0 !important;
-      border: none !important;
-
-      span {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        img {
-          margin-right: -0.3rem;
-        }
       }
     }
   }
