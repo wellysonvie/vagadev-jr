@@ -5,20 +5,20 @@ import styles from '../styles/components/ProductCard.module.scss';
 const ProductCard = ({ product, openAddedProductModal }) => {
 
   const [purchased, setPurchased] = useState(false);
-  const { addProduct, removeProduct } = useBag();
+  const { bagProducts, addProduct, removeProduct, containsProduct } = useBag();
 
   function purchase() {
-    setPurchased(!purchased);
-  }
-
-  useEffect(() => {
-    if (purchased) {
+    if (!purchased) {
       addProduct(product);
       openAddedProductModal();
     } else {
       removeProduct(product.id);
     }
-  }, [purchased]);
+  }
+
+  useEffect(() => {
+    setPurchased(containsProduct(product.id));
+  }, [product, bagProducts]);
 
   return (
     <article className={styles.productCard}>

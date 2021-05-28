@@ -14,12 +14,17 @@ export function BagProvider({ children }) {
     setBagProducts(bagProducts.filter(product => product.id !== productId));
   }
 
+  function containsProduct(productId) {
+    return bagProducts.some(product => product.id === productId);
+  }
+
   return (
     <BagContext.Provider
       value={{
         bagProducts,
         addProduct,
-        removeProduct
+        removeProduct,
+        containsProduct
       }}
     >
       {children}

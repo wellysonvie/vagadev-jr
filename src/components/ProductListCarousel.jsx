@@ -1,20 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ProductCard from './ProductCard';
 import styles from '../styles/components/ProductListCarousel.module.scss';
 
 const ProductListCarousel = ({ products, openAddedProductModal }) => {
 
-  const [productCards, setProductCards] = useState([]);
   const [currentCarouselProductIndex, setCurrentCarouselProductIndex] = useState(0);
-
-  useEffect(() => {
-    setProductCards(products.map(product => (
-      <ProductCard
-        product={product}
-        openAddedProductModal={openAddedProductModal}
-      />
-    )));
-  }, [products]);
 
   function nextCarouselProduct() {
     if (currentCarouselProductIndex === products.length - 1) {
@@ -39,7 +29,10 @@ const ProductListCarousel = ({ products, openAddedProductModal }) => {
         alt="Anterior"
         onClick={previousCarouselProduct}
       />
-      {productCards[currentCarouselProductIndex]}
+      <ProductCard
+        product={products[currentCarouselProductIndex]}
+        openAddedProductModal={openAddedProductModal}
+      />
       <img
         src="/assets/svg/angle-right-solid-blue.svg"
         alt="Próximo"
