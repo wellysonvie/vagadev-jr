@@ -118,3 +118,9 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header .menuOptions li img {
+    margin-right: 0.2rem;
+  }
+}
