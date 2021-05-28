@@ -22,7 +22,7 @@ const ProductCard = ({ product, openAddedProductModal }) => {
 
   return (
     <article className={styles.productCard}>
-      <img src={product.image} alt={product.name} />
+      <img src={product.image} alt={product.name} loading="lazy" />
       <div>
         <h2>{product.name}</h2>
         <p>{product.price}</p>
