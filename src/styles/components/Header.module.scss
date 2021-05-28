@@ -1,0 +1,126 @@
+.header {
+  width: min(90vw, 1190px);
+  margin: 0 auto;
+  padding-top: 2.75rem;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .hamburgerBtn {
+      width: 30px;
+      height: 24px;
+      margin-right: 2.68rem;
+      background-image: url(/assets/svg/icon_hamburguer.svg);
+      background-size: cover;
+      background-position: 0;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    img {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .menuOptions {
+    display: flex;
+    align-items: center;
+
+    li {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 0.94rem;
+      }
+
+      span {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--white);
+      }
+
+      &:nth-child(1) img {
+        margin-top: -0.4rem;
+      }
+
+      &:nth-child(2) {
+        margin: 0 2.43rem 0 2.68rem;
+        padding: 0 2.68rem 0 2.43rem;
+        border-left: 1px solid var(--white);
+        border-right: 1px solid var(--white);
+      }
+
+      &:nth-child(3) {
+        span {
+          background-color: var(--blue);
+          width: 1.43rem;
+          height: 1.43rem;
+          border-radius: 50%;
+
+          font-weight: 900;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .menuOptions li {
+    margin: 0 0.4rem !important;
+    padding: 0 !important;
+    border: none !important;
+
+    span {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      img {
+        margin-right: -0.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    padding-top: 1.75rem;
+
+    .brand {
+      .hamburgerBtn {
+        margin-right: 1.75rem;
+
+        &[data-clicked="true"] {
+          background-image: url(/assets/svg/icon_hamburguer_close.svg);
+        }
+      }
+
+      img {
+        width: 6.68rem;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header .menuOptions li img {
+    margin-right: 0.2rem;
+  }
+}

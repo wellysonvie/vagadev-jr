@@ -1,0 +1,57 @@
+.addedProductModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 65, 84, 0.62);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .messageBox {
+    width: min(25rem, 90vw);
+    height: 31.25rem;
+    background-color: var(--white);
+    border-radius: 5px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .closeBtn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+
+    span {
+      margin-top: 9.06rem;
+      width: 100%;
+      height: 1px;
+      background-color: var(--dark-blue);
+    }
+
+    p {
+      width: 16rem;
+      margin-top: -4.8rem;
+      background-color: var(--white);
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.875rem;
+      color: var(--dark-blue);
+    }
+
+    img:not(.closeBtn) {
+      width: 13.56rem;
+      height: 17rem;
+      margin-bottom: -0.65rem;
+    }
+  }
+}
